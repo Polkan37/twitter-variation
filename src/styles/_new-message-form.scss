@@ -1,0 +1,46 @@
+.new-message-form {
+    display       : flex;
+    flex-direction: column;
+    gap           : 6px;
+    width         : 100%;
+    color         : #8C8C8C;
+    margin-bottom: 20px;
+    // filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25)); add it when button "new twit" clicked
+
+    &__button {
+        width: 90px !important;
+        padding: 0 10px;
+        line-height: 1;
+        padding: 3px;
+        border: 2px solid $base-color;
+        align-self  : flex-end;
+
+        &:disabled,
+        button[disabled] {
+            border          : 1px solid #EAEAEA;
+            background-color: #fff;
+            color           : #8C8C8C;
+        }
+    }
+
+    .card__title {
+        margin-left   : 7px;
+        margin-bottom : 7px;
+        color         : #FF868E;
+        font-weight   : 400;
+        font-size     : 14px;
+        text-transform: uppercase;
+    }
+
+    input,
+    textarea {
+        padding      : 5px 10px;
+        border       : 1px solid #EAEAEA;
+        border-radius: 20px;
+        color        : #1d1d1d;
+
+        &::placeholder {
+            color: #8C8C8C
+        }
+    }
+}

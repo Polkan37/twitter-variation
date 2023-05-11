@@ -1,0 +1,48 @@
+@mixin button {
+  display: inline-block;
+  border: .1em solid transparent;
+  font-family   : $base-font;
+  font-weight   : $font-bold;
+  font-size     : $button-text-size;
+  line-height   : 2.8;
+  letter-spacing: 2px;
+  color         : $base-color;
+  text-transform: uppercase;
+  background    : $container-color;
+  border-radius : $buttons-border-radius;
+  text-align: center;
+  text-decoration: none;
+  transition: all .1s ease-out;
+
+  // &:hover {
+  //   background   : $second-color;
+  //   color        : $base-color;
+  // }
+
+  &:active {
+    background-color: $second-color;
+    color           : $base-color;
+  }
+}
+
+@mixin container {
+  background: $container-color;
+  border-radius: $card-border-radius;
+  padding: 15px;
+}
+
+@mixin header {
+  font-family: $base-font;
+  font-weight: $font-regular;
+  font-size: $h2-font-size;
+  line-height: 1.25;
+  color: $second-text-color;
+}
+
+@mixin text {
+  font-family: $base-font;
+  font-weight: $font-regular;
+  font-size: $text-size;
+  line-height: 1.45;
+  color: $text-color;
+}

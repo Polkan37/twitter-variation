@@ -1,0 +1,55 @@
+.reply-post {
+    position      : relative;
+    display       : flex;
+    flex-direction: row;
+
+    &__path {
+        min-width: 20px;
+        width    : 20px;
+    }
+
+    &__path-line {
+        position  : absolute;
+        top       : -8px;
+        left      : 8px;
+        background: $base-color;
+        width     : 4px;
+        height    : 100%;
+    }
+
+
+    .reply-post__point {
+        position: absolute;
+        top     : 25px;
+        left    : 8px;
+        z-index : 1;
+
+    }
+}
+.reply-thread-button {
+    min-width: 90px;
+    padding  : 0 10px;
+    background: $base-color;
+    color: $container-color;
+
+    &:disabled,
+    button[disabled] {
+        border          : 1px solid #EAEAEA;
+        background-color: #fff;
+        color           : #8C8C8C;
+    }
+}
+.post__replies {
+    margin: 0 auto;
+}
+.last-reply > .reply-post__path > .reply-post__path-line {
+    height: 40px !important;
+}
+
+.post__point {
+    position: absolute;
+    bottom     : -8px;
+    left    : 0;
+    z-index : 0;
+    transform: translateZ(-10px)
+}

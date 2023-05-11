@@ -1,0 +1,30 @@
+.search{
+    position: relative;
+    overflow: hidden;
+
+    &__container {
+        margin: 0.5em 1em 0.5em 0em;
+        padding: 10px 10px;
+        background-color: #fff;
+        border-radius: 20px;
+        font-family: 'Jost';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 29px;
+        color: #8C8C8C;
+        box-sizing: border-box;
+
+    }
+    button {
+        position: absolute;
+        top: 50%;
+        right: 1.8em;
+        transform: translateY(-50%);
+        width: 40px;
+        height: 40px;
+        border-radius: 20px;
+        border: none;
+        background: #FBE0DC;
+    }
+}

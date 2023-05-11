@@ -1,0 +1,117 @@
+@import 'zeroing';
+@import 'variables';
+@import 'mixins';
+
+html {
+    scroll-behavior: smooth;
+    box-sizing     : content-box;
+  }
+  
+body {
+    margin                 : 0;
+    background: $bg-colog;
+    -webkit-font-smoothing : antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+}
+
+#root {
+    position       : relative;
+    display        : flex;
+    flex-direction : column;
+    justify-content: center;
+    align-items    : center;
+    background     : $bg-colog;
+    margin: 10px 20px;
+}
+
+.main {
+    padding: 0 10px;
+    max-height: calc(100vh - 78px);
+    max-width: 660px;
+    width    : 100%;
+    flex      : 1 1 auto;
+    height    : auto;
+    overflow  : auto;
+
+    &::-webkit-scrollbar {
+        width        : 6px;
+        border-radius: 5px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background-color: $input-border-color;
+        border-radius   : 5px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: #ffffff;
+        border-radius   : 5px;
+    }
+}
+
+.wrapper {
+    max-height     : 98vh;
+    max-width      : 1240px;
+    width          : 100%;
+    height         : 100%;
+    display        : flex;
+    flex-direction : column;
+    justify-content: center;
+    align-items    : center;
+    overflow       : hidden !important;
+}
+
+.container {
+    max-width: 680px;
+    width    : 100%;
+}
+
+.button {
+    @include button;
+}
+
+.page-title {
+    background    : $base-font;
+    font-size     : $h2-font-size;
+    font-weight   : $font-bold;
+    color         : $base-color;
+    line-height   : 2.8;
+    text-transform: uppercase;
+    text-align    : center;
+}
+
+.active {
+    background-color: $second-color;
+    color           : $base-color;
+}
+
+
+@import 'header';
+@import 'sidebar';
+@import 'post';
+@import 'new-message-form';
+@import 'thread';
+@import 'notifications';
+
+
+
+@media (min-width: 1024px) {
+    body {
+        overflow: hidden !important;
+    }
+
+    .main {
+        height  : auto;
+        overflow: auto;
+    }
+
+    .wrapper {
+        display              : grid;
+        grid-template-columns: 1fr 3fr 1fr;
+        gap                  : 20px;
+        vertical-align       : top;
+        align-items          : flex-start;
+    }
+
+}
