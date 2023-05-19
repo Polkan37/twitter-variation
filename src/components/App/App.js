@@ -12,7 +12,7 @@ import '../../api/mirageServer'
 import useToken from './useToken';
 
 function App() {
-  const { token, setToken } = useToken();
+  // const { token, setToken } = useToken();
   const [title, setTitle] = useState('Main');
   const [messageForm, setMessageForm] = useState(false);
 
@@ -20,9 +20,9 @@ function App() {
   let location = useLocation();
   const isHomePage = location.pathname === '/';
 
-  if(!token) {
-    setToken({token: 'test123'})
-  }
+  // if(!token) {
+  //   setToken({token: 'test123'})
+  // }
   useEffect(() => {
     const headers = [
       { path: '/', header: 'Main' },
